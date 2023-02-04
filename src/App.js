@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 import Swatches from './Swatches';
+import GenerateRandomColor from './GenerateRandomColor'
 import './App.css'
 
-const App = () => {
+function App() {
   const [colors, setColors] = useState(generateRandomColors());
   const [answer, setAnswer] = useState('no answer');
 
-  function generateRandomColor() {
-    const color = Math.floor(Math.random() * 256).toString(16).padStart(2, '0');
-    return color;
-  }
+  <GenerateRandomColor />
 
   function generateRandomColors() {
-    const color1 = `#${generateRandomColor()}${generateRandomColor()}${generateRandomColor()}`;
-    const color2 = `#${generateRandomColor()}${generateRandomColor()}${generateRandomColor()}`;
-    const color3 = `#${generateRandomColor()}${generateRandomColor()}${generateRandomColor()}`;
+    const color1 = `#${GenerateRandomColor()}${GenerateRandomColor()}${GenerateRandomColor()}`;
+    const color2 = `#${GenerateRandomColor()}${GenerateRandomColor()}${GenerateRandomColor()}`;
+    const color3 = `#${GenerateRandomColor()}${GenerateRandomColor()}${GenerateRandomColor()}`;
     return [color1, color2, color3];
   }
 
